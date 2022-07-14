@@ -14,6 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5475051628807D85000B7D50 /* CICD-Project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "CICD-Project-Info.plist"; sourceTree = SOURCE_ROOT; };
 		54CCC2D72880250300A3A44A /* CICD_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CICD_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54CCC2DA2880250300A3A44A /* CICD_ProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CICD_ProjectApp.swift; sourceTree = "<group>"; };
 		54CCC2DC2880250300A3A44A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		54CCC2D92880250300A3A44A /* CICD_Project */ = {
 			isa = PBXGroup;
 			children = (
+				5475051628807D85000B7D50 /* CICD-Project-Info.plist */,
 				54CCC2DA2880250300A3A44A /* CICD_ProjectApp.swift */,
 				54CCC2DC2880250300A3A44A /* ContentView.swift */,
 				54CCC2DE2880250500A3A44A /* Assets.xcassets */,
@@ -271,6 +273,7 @@
 				DEVELOPMENT_TEAM = RG5F42JUH9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CICD-Project-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -302,6 +305,7 @@
 				DEVELOPMENT_TEAM = RG5F42JUH9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "CICD-Project-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
