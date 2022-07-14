@@ -1,0 +1,2 @@
+app_identifier "io.marco.maddalena.fastlane.cicd.test" # The bundle identifier of your app
+apple_id "marco.maddalena1982@gmail.com"  # Your Apple email address
