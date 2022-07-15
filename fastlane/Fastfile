@@ -14,8 +14,11 @@ platform :ios do
     # cocoapods
 
     gym(
+      workspace: "./CICD_Project.xcworkspace",
+      configuration: "release",
       scheme: "prod",
-      workspace: "./CICD_Project.xcworkspace"
+      clean: true,
+      include_bitcode: false
     )
 
     app_store_connect_api_key(
