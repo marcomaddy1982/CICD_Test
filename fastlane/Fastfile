@@ -3,16 +3,16 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Create a release version archive for production"
-  lane :release_production do
+  desc "Archive for production"
+  lane :archive_production do
     release(
       configuration: "Release",
       scheme: "prod"
     )
   end 
 
-  desc "Upload prod to AppStoreConnect"
-  lane :release do |options|
+  desc "Archive for scheme and build configuration"
+  lane :archive do |options|
     increment_build_number(
       build_number: ENV['BITRISE_BUILD_NUMBER'],
     )
@@ -28,7 +28,10 @@ platform :ios do
       clean: true,
       include_bitcode: false
     )
+  end
 
+  desc "Upload to AppStoreConnect and deploy to TestFlight"
+  lane :deploy do
     app_store_connect_api_key(
       key_id: "3PSFM6973T",
       issuer_id: "eef01e0b-9389-48e1-9f14-67a1d1fa2f19",
@@ -36,9 +39,11 @@ platform :ios do
       duration: 1200,
       in_house: false
     )
-    
+
     pilot(
-      skip_waiting_for_build_processing: false
+      changelog: "Bug Fixes.",
+      skip_waiting_for_build_processing: false,
+      api_key: api_key
     )
 
     clean_build_artifacts
