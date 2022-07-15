@@ -82,7 +82,6 @@
 				43224654A43F1D0E077896A1 /* Pods-CICD_Project.debug.xcconfig */,
 				A25F41E135B70A620D84BF03 /* Pods-CICD_Project.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -338,7 +337,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"CICD_Project/Preview Content\"";
 				DEVELOPMENT_TEAM = RG5F42JUH9;
 				ENABLE_PREVIEWS = YES;
@@ -371,7 +370,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 13;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_ASSET_PATHS = "\"CICD_Project/Preview Content\"";
 				DEVELOPMENT_TEAM = RG5F42JUH9;
 				ENABLE_PREVIEWS = YES;
