@@ -5,20 +5,23 @@ default_platform(:ios)
 platform :ios do
   desc "Upload prod to AppStoreConnect"
   lane :beta do
-    build_number = increment_build_number
-    match(type: "appstore")
+    increment_build_number
+    
+    # match(type: "appstore")
+    
     cocoapods
-    api_key = app_store_connect_api_key(
+
+    gym(
+      scheme: "prod",
+      workspace: "./CICD_Project.xcworkspace"
+    )
+
+    app_store_connect_api_key(
       key_id: "3PSFM6973T",
       issuer_id: "eef01e0b-9389-48e1-9f14-67a1d1fa2f19",
       key_filepath: "./AuthKey_3PSFM6973T.p8",
       duration: 1200,
       in_house: false
-    )
-
-    gym(
-      scheme: "prod",
-      workspace: "./CICD_Project.xcworkspace"
     )
     
     pilot(
@@ -26,11 +29,11 @@ platform :ios do
     )
     clean_build_artifacts
 
-    commit_version_bump(
-      message: "Fastlane iOS: Released new build #{lane_context[SharedValues::BUILD_NUMBER]} [ci ckip]",
-      xcodeproj: "./CICD_Project.xcodeproj",
-      force: true
-    )
+    # commit_version_bump(
+    #   message: "Fastlane iOS: Released new build #{lane_context[SharedValues::BUILD_NUMBER]} [ci ckip]",
+    #   xcodeproj: "./CICD_Project.xcodeproj",
+    #   force: true
+    # )
   end
 
   desc "Create the bundle id and the application"
