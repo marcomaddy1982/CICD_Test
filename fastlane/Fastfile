@@ -5,7 +5,9 @@ default_platform(:ios)
 platform :ios do
   desc "Upload prod to AppStoreConnect"
   lane :beta do
-    build_number = increment_build_number
+    increment_build_number(
+      build_number: ENV['BITRISE_BUILD_NUMBER'],
+    )
     
     # match(type: "appstore")
     
@@ -27,6 +29,7 @@ platform :ios do
     pilot(
       skip_waiting_for_build_processing: true
     )
+    
     clean_build_artifacts
 
     # commit_version_bump(
