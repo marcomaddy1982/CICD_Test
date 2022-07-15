@@ -38,7 +38,7 @@ platform :ios do
     )
     
     pilot(
-      skip_waiting_for_build_processing: true
+      skip_waiting_for_build_processing: false
     )
 
     clean_build_artifacts
