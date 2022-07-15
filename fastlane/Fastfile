@@ -18,7 +18,7 @@ platform :ios do
 
     gym(
       scheme: "prod",
-      workspace: "../CICD_Project.xcworkspace"
+      workspace: "./CICD_Project.xcworkspace"
     )
     
     pilot(
