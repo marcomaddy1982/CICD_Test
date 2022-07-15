@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import Alamofire
+import Lottie
+import RxSwift
 
 @main
 struct CICD_ProjectApp: App {

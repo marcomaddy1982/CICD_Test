@@ -1,0 +1,20 @@
+# Created by https://www.toptal.com/developers/gitignore/api/xcode,cocoapods,fastlane
+# Edit at https://www.toptal.com/developers/gitignore?templates=xcode,cocoapods,fastlane
+
+Pods/
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/screenshots/screenshots.html
+fastlane/test_output
+fastlane/FastlaneRunner
+xcuserdata/
+build/
+DerivedData/
+### Xcode Patch ###
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcodeproj/xcshareddata/
+!*.xcworkspace/contents.xcworkspacedata
+/*.gcno
+**/xcshareddata/WorkspaceSettings.xcsettings

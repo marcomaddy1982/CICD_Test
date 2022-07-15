@@ -21,7 +21,7 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 [bundle exec] fastlane ios beta
 ```
 
-beta lane
+Upload prod to AppStoreConnect
 
 ### ios register_app
 
