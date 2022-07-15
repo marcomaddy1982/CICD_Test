@@ -15,7 +15,7 @@ platform :ios do
 
     gym(
       workspace: "./CICD_Project.xcworkspace",
-      configuration: "release",
+      configuration: "Release",
       scheme: "prod",
       clean: true,
       include_bitcode: false
