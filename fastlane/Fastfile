@@ -11,7 +11,7 @@ platform :ios do
     
     # match(type: "appstore")
     
-    cocoapods
+    # cocoapods
 
     gym(
       scheme: "prod",
@@ -29,7 +29,7 @@ platform :ios do
     pilot(
       skip_waiting_for_build_processing: true
     )
-    
+
     clean_build_artifacts
 
     # commit_version_bump(
