@@ -67,7 +67,7 @@ platform :ios do
     scan(
       workspace: ENV['WORKSPACE_PATH'],
       scheme: options[:scheme],
-      device: "iPhone 8 (15.3)",
+      destination: "platform=iOS Simulator,name=iPhone 8 Plus,OS=latest",
       clean: true
     )
   end
