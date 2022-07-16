@@ -17,8 +17,8 @@ platform :ios do
       build_number: ENV['BITRISE_BUILD_NUMBER'],
     )
     
+    # This are done in the bitrise workflow
     # match(type: "appstore")
-    
     # cocoapods
 
     gym(
@@ -35,7 +35,7 @@ platform :ios do
     api_key = app_store_connect_api_key(
       key_id: "3PSFM6973T",
       issuer_id: "eef01e0b-9389-48e1-9f14-67a1d1fa2f19",
-      key_filepath: "./AuthKey_3PSFM6973T.p8",
+      key_filepath: ENV['APPSTORE_API_KEY_PATH'],
       duration: 1200,
       in_house: false
     )
@@ -47,22 +47,16 @@ platform :ios do
     )
 
     clean_build_artifacts
-
-    # commit_version_bump(
-    #   message: "Fastlane iOS: Released new build #{lane_context[SharedValues::BUILD_NUMBER]} [ci ckip]",
-    #   xcodeproj: "./CICD_Project.xcodeproj",
-    #   force: true
-    # )
   end
 
-  desc "Run unit test"
+  desc "Run unit tests for production"
   lane :execute_tests_production do |options|
     execute_tests(
       scheme: "prod"
     )
   end
 
-  desc "Run unit test"
+  desc "Run unit tests"
   lane :execute_tests do |options|
     scan(
       workspace: ENV['WORKSPACE_PATH'],
@@ -78,6 +72,15 @@ platform :ios do
       username: "marco.maddalena1982@gmail.com",
       app_identifier: "io.marco.maddalena.fastlane.cicd.test",
       app_name: "FastlaneCicdTest"
+    )
+  end
+
+  desc "Commit version bump"
+  lane :commit_bump do
+    commit_version_bump(
+      message: "Fastlane iOS: Released new build #{lane_context[SharedValues::BUILD_NUMBER]} [ci ckip]",
+      xcodeproj: ENV['WORKSPACE_PATH'],
+      force: true
     )
   end
 end
