@@ -56,14 +56,14 @@ platform :ios do
   end
 
   desc "Run unit test"
-  lane :tests_to_run_production do |options|
-    tests_to_run(
+  lane :execute_tests_production do |options|
+    execute_tests(
       scheme: "prod"
     )
   end
 
   desc "Run unit test"
-  lane :tests_to_run do |options|
+  lane :execute_tests do |options|
     scan(
       workspace: ENV['WORKSPACE_PATH'],
       scheme: options[:scheme],
