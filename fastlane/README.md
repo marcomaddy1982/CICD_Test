@@ -39,18 +39,18 @@ Archive for scheme and build configuration
 
 Upload to AppStoreConnect and deploy to TestFlight
 
-### ios run_tests_production
+### ios tests_to_run_production
 
 ```sh
-[bundle exec] fastlane ios run_tests_production
+[bundle exec] fastlane ios tests_to_run_production
 ```
 
 Run unit test
 
-### ios run_tests
+### ios tests_to_run
 
 ```sh
-[bundle exec] fastlane ios run_tests
+[bundle exec] fastlane ios tests_to_run
 ```
 
 Run unit test

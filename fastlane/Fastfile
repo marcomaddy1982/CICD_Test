@@ -56,17 +56,18 @@ platform :ios do
   end
 
   desc "Run unit test"
-  lane :run_tests_production do |options|
-    run_tests(
+  lane :tests_to_run_production do |options|
+    tests_to_run(
       scheme: "prod"
     )
   end
 
   desc "Run unit test"
-  lane :run_tests do |options|
+  lane :tests_to_run do |options|
     scan(
       workspace: ENV['WORKSPACE_PATH'],
       scheme: options[:scheme],
+      device: "iPhone 8 (15.3)",
       clean: true
     )
   end
