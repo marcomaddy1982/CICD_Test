@@ -15,13 +15,45 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 ## iOS
 
-### ios beta
+### ios archive_production
 
 ```sh
-[bundle exec] fastlane ios beta
+[bundle exec] fastlane ios archive_production
 ```
 
-Upload prod to AppStoreConnect
+Archive for production
+
+### ios archive
+
+```sh
+[bundle exec] fastlane ios archive
+```
+
+Archive for scheme and build configuration
+
+### ios deploy
+
+```sh
+[bundle exec] fastlane ios deploy
+```
+
+Upload to AppStoreConnect and deploy to TestFlight
+
+### ios run_tests_production
+
+```sh
+[bundle exec] fastlane ios run_tests_production
+```
+
+Run unit test
+
+### ios run_tests
+
+```sh
+[bundle exec] fastlane ios run_tests
+```
+
+Run unit test
 
 ### ios register_app
 

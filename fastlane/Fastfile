@@ -55,6 +55,22 @@ platform :ios do
     # )
   end
 
+  desc "Run unit test"
+  lane :run_tests_production do |options|
+    run_tests(
+      scheme: "prod"
+    )
+  end
+
+  desc "Run unit test"
+  lane :run_tests do |options|
+    scan(
+      workspace: ENV['WORKSPACE_PATH'],
+      scheme: options[:scheme],
+      clean: true
+    )
+  end
+
   desc "Create the bundle id and the application"
   lane :register_app do
     produce(

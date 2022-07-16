@@ -22,9 +22,7 @@ class CICD_ProjectTests: XCTestCase {
         XCTAssertTrue(1 > 0)
     }
     
-    /*
     func testExampleFail() throws {
         XCTAssertTrue(1 < 0)
     }
-    */
 }
