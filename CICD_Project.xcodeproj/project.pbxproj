@@ -553,7 +553,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CICD_Project.app/CICD_Project";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CICD_Project_Stage.app/CICD_Project_Stage";
 			};
 			name = "Debug-stage";
 		};
@@ -571,7 +571,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CICD_Project.app/CICD_Project";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CICD_Project_Stage.app/CICD_Project_Stage";
 			};
 			name = "Release-stage";
 		};
@@ -714,6 +714,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.marco.maddalena.fastlane.cicd.test.stage;
+				PRODUCT_MODULE_NAME = CICD_Project;
 				PRODUCT_NAME = CICD_Project_Stage;
 				PROVISIONING_PROFILE_SPECIFIER = "match Development io.marco.maddalena.fastlane.cicd.test.stage";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -747,6 +748,7 @@
 				);
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.marco.maddalena.fastlane.cicd.test.stage;
+				PRODUCT_MODULE_NAME = CICD_Project;
 				PRODUCT_NAME = CICD_Project_Stage;
 				PROVISIONING_PROFILE_SPECIFIER = "match AppStore io.marco.maddalena.fastlane.cicd.test.stage";
 				SWIFT_EMIT_LOC_STRINGS = YES;
