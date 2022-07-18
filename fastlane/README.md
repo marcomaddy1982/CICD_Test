@@ -23,6 +23,14 @@ For _fastlane_ installation instructions, see [Installing _fastlane_](https://do
 
 Archive for production
 
+### ios archive_stage
+
+```sh
+[bundle exec] fastlane ios archive_stage
+```
+
+
+
 ### ios archive
 
 ```sh
@@ -45,7 +53,7 @@ Upload to AppStoreConnect and deploy to TestFlight
 [bundle exec] fastlane ios execute_tests_production
 ```
 
-Run unit test
+Run unit tests for production
 
 ### ios execute_tests
 
@@ -53,7 +61,7 @@ Run unit test
 [bundle exec] fastlane ios execute_tests
 ```
 
-Run unit test
+Run unit tests
 
 ### ios register_app
 
@@ -62,6 +70,78 @@ Run unit test
 ```
 
 Create the bundle id and the application
+
+### ios register_app_production
+
+```sh
+[bundle exec] fastlane ios register_app_production
+```
+
+Create production FastlaneCicdTest app
+
+### ios register_app_stage
+
+```sh
+[bundle exec] fastlane ios register_app_stage
+```
+
+Create stage FastlaneCicdTest app
+
+### ios create_appstore_cert_and_profile
+
+```sh
+[bundle exec] fastlane ios create_appstore_cert_and_profile
+```
+
+Create appstore certificates and profiles for app_id
+
+### ios create_appstore_cert_and_profile_prod
+
+```sh
+[bundle exec] fastlane ios create_appstore_cert_and_profile_prod
+```
+
+Create appstore certificates and profiles for FastlaneCicdTest app
+
+### ios create_appstore_cert_and_profile_stage
+
+```sh
+[bundle exec] fastlane ios create_appstore_cert_and_profile_stage
+```
+
+Create appstore certificates and profiles for FastlaneCicdTestStage app
+
+### ios create_development_cert_and_profile
+
+```sh
+[bundle exec] fastlane ios create_development_cert_and_profile
+```
+
+Create development certificates and profiles for app_id
+
+### ios create_development_cert_and_profile_prod
+
+```sh
+[bundle exec] fastlane ios create_development_cert_and_profile_prod
+```
+
+Create development certificates and profiles for FastlaneCicdTest app
+
+### ios create_development_cert_and_profile_stage
+
+```sh
+[bundle exec] fastlane ios create_development_cert_and_profile_stage
+```
+
+Create development certificates and profiles for FastlaneCicdTestStage app
+
+### ios commit_bump
+
+```sh
+[bundle exec] fastlane ios commit_bump
+```
+
+Commit version bump
 
 ----
 

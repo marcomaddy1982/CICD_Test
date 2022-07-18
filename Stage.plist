@@ -5,6 +5,8 @@
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
 	<key>CFBundleIdentifier</key>
-	<string>io.marco.maddalena.fastlane.cicd.test</string>
+	<string>io.marco.maddalena.fastlane.cicd.test.stage</string>
+	<key>EnvironmentName</key>
+	<string>${environment_name}</string>
 </dict>
 </plist>

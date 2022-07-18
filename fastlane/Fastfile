@@ -6,8 +6,15 @@ platform :ios do
   desc "Archive for production"
   lane :archive_production do
     archive(
-      configuration: "Release",
+      configuration: "Release-prod",
       scheme: "prod"
+    )
+  end
+
+  lane :archive_stage do
+    archive(
+      configuration: "Release-stage",
+      scheme: "stage"
     )
   end 
 
@@ -18,7 +25,10 @@ platform :ios do
     )
     
     # This are done in the bitrise workflow
-    # match(type: "appstore")
+    # match(
+    #   type: "appstore",
+    #   app_identifier "io.marco.maddalena.fastlane.cicd.test"
+    # )
     # cocoapods
 
     gym(
@@ -67,11 +77,71 @@ platform :ios do
   end
 
   desc "Create the bundle id and the application"
-  lane :register_app do
+  lane :register_app do |options|
     produce(
       username: "marco.maddalena1982@gmail.com",
+      app_identifier: options[:app_identifier],
+      app_name: options[:app_name]
+    )
+  end
+
+  desc "Create production FastlaneCicdTest app"
+  lane :register_app_production do
+    register_app(
       app_identifier: "io.marco.maddalena.fastlane.cicd.test",
       app_name: "FastlaneCicdTest"
+    )
+  end
+
+  desc "Create stage FastlaneCicdTest app"
+  lane :register_app_stage do
+    produce(
+      app_identifier: "io.marco.maddalena.fastlane.cicd.test.stage",
+      app_name: "FastlaneCicdTestStage"
+    )
+  end
+
+  desc "Create appstore certificates and profiles for app_id"
+  lane :create_appstore_cert_and_profile do |options|
+    match(
+      type: "appstore",
+      app_identifier: options[:app_identifier]
+    )
+  end
+
+  desc "Create appstore certificates and profiles for FastlaneCicdTest app"
+  lane :create_appstore_cert_and_profile_prod do
+    create_appstore_cert_and_profile(
+      app_identifier: "io.marco.maddalena.fastlane.cicd.test"
+    )
+  end
+
+  desc "Create appstore certificates and profiles for FastlaneCicdTestStage app"
+  lane :create_appstore_cert_and_profile_stage do
+    create_appstore_cert_and_profile(
+      app_identifier: "io.marco.maddalena.fastlane.cicd.test.stage"
+    )
+  end
+
+  desc "Create development certificates and profiles for app_id"
+  lane :create_development_cert_and_profile do |options|
+    match(
+      type: "development",
+      app_identifier: options[:app_identifier]
+    )
+  end
+
+  desc "Create development certificates and profiles for FastlaneCicdTest app"
+  lane :create_development_cert_and_profile_prod do
+    create_development_cert_and_profile(
+      app_identifier: "io.marco.maddalena.fastlane.cicd.test"
+    )
+  end
+
+  desc "Create development certificates and profiles for FastlaneCicdTestStage app"
+  lane :create_development_cert_and_profile_stage do
+    create_development_cert_and_profile(
+      app_identifier: "io.marco.maddalena.fastlane.cicd.test.stage"
     )
   end
 

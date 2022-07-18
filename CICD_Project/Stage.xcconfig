@@ -1,0 +1,14 @@
+//
+//  Stage.xcconfig
+//  CICD_Project
+//
+//  Created by Marco Maddalena on 18.07.22.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+#include "Pods/Target Support Files/Pods-CICD_Project/Pods-CICD_Project.debug-stage.xcconfig"
+#include "Pods/Target Support Files/Pods-CICD_Project/Pods-CICD_Project.release-stage.xcconfig"
+
+environment_name = stage
