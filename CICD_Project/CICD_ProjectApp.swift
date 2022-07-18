@@ -11,7 +11,7 @@ import Lottie
 import RxSwift
 
 @main
-struct CICD_ProjectApp: App {
+struct CICDProjectApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
