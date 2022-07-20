@@ -10,8 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         let environmentName = Bundle.main.object(forInfoDictionaryKey: "EnvironmentName") as? String
-        Text(String(format: "This is the %@ environment", environmentName!))
-            .padding()
+        Group {
+            Text(String(format: "This is the %@ environment", environmentName!))
+                .padding()
+            Text("This is a test")
+                .padding()
+        }
+        
     }
 }
 
