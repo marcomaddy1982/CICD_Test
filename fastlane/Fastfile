@@ -52,7 +52,7 @@ platform :ios do
 
     pilot(
       changelog: "Bug Fixes.",
-      skip_waiting_for_build_processing: false,
+      skip_waiting_for_build_processing: true,
       api_key: api_key
     )
 
