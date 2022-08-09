@@ -13,7 +13,9 @@ struct ContentView: View {
         Group {
             Text(String(format: "This is the %@ environment", environmentName!))
                 .padding()
-            Text("This is a test again and again")
+            Text("This is a test again")
+                .padding()
+            Text("This is a test again")
                 .padding()
         }
         
